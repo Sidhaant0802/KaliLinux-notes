@@ -1,0 +1,6 @@
+How to change wifi to monitor mode:-
+
+ [+]   ip link set wlan0 down
+ [+]   iw wlan0 set type managed
+ [+]   ip link set wlan0 up
+

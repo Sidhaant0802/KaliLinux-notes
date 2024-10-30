@@ -1,0 +1,13 @@
+#Note this attack only works before someone even tries to connect to the speaker.. make sure no one has connected to the speaker yet.
+
+sudo service bluetooth start 
+hcitool scan
+Copy MAC addr of victim device
+paste it in the Target addr section in the python script for Bluetooth DOS
+Package size:- 600
+Thread Count:- 100
+
+Hacking tool used:- https://github.com/crypt0b0y/BLUETOOTH-DOS-ATTACK-SCRIPT
+
+
+#Incase bluetooth not working just do ----  service bluetooth restart

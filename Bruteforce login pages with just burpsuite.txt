@@ -1,0 +1,12 @@
+Switch on FoxyProxy Burpsuite 
+test login credentials (assuming u atleast know the username)
+copy the error login message (example = INVALID CREDENTIALS)
+
+(Make sure intercept is on first and then foxyproxy)
+Right click and send proxy info to intercept tab
+Go to intruder tab and in the tab go to positions and clear the login field and form field. Even clear the security level.
+go to payloads in payload options add your password list
+now go to options/settings --> scroll down till grep match (clear it), add the error message which we copied while initially logging in. ---> add it
+Scroll up again and start the attack!
+
+VOILA THATS IT!!

